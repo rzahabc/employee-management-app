@@ -1,11 +1,13 @@
 import { Stack } from 'expo-router';
 import { AuthProvider } from '../contexts/AuthContext';
-import { I18nManager } from 'react-native';
+import { I18nManager, Platform } from 'react-native';
 import { useEffect } from 'react';
 
-// Force RTL for Arabic
-if (!I18nManager.isRTL) {
+// Force RTL for Arabic - only on first load
+if (!I18nManager.isRTL && Platform.OS !== 'web') {
+  I18nManager.allowRTL(true);
   I18nManager.forceRTL(true);
+  // Note: App needs to reload for RTL to take effect
 }
 
 export default function RootLayout() {
