@@ -1,6 +1,7 @@
 {
   "cli": {
-    "version": ">= 5.0.0"
+    "version": ">= 5.0.0",
+    "packageManager": "yarn"
   },
   "build": {
     "development": {
@@ -10,21 +11,11 @@
     "preview": {
       "android": {
         "buildType": "apk"
-      },
-      "node": "18.18.0",
-      "env": {
-        "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
-        "npm_config_legacy_peer_deps": "true"
       }
     },
     "production": {
       "android": {
         "buildType": "apk"
-      },
-      "node": "18.18.0",
-      "env": {
-        "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
-        "npm_config_legacy_peer_deps": "true"
       }
     }
   },
